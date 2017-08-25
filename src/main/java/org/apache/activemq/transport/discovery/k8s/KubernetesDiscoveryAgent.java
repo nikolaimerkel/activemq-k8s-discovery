@@ -107,8 +107,8 @@ public class KubernetesDiscoveryAgent implements DiscoveryAgent {
                         .map(pod -> String.format(serviceUrlFormat, pod.getStatus().getPodIP()))
                         .collect(Collectors.toSet());
 
-                    LOG.info("Known-Services: " + knownServices)
-                    LOG.info("Available-Services: " + availableServices)
+                    LOG.info("## Known-Services: " + knownServices + "\n");
+                    LOG.info("##Available-Services: " + availableServices);
                     // Determine the list of service we need to add
                     final List<String> servicesToAdd = availableServices.stream()
                             .filter(svc -> !knownServices.contains(svc))
