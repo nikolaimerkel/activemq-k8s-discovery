@@ -60,7 +60,7 @@ public class KubernetesDiscoveryAgent implements DiscoveryAgent {
     private final AtomicBoolean running = new AtomicBoolean(false);
     private TaskRunnerFactory taskRunner;
 
-    private String namespace = "default";
+    private String namespace = "activemq-petset";
     private String podLabelKey = "app";
     private String podLabelValue = "activemq";
     private String serviceUrlFormat = "tcp://%s:61616";
